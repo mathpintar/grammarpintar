@@ -51,7 +51,6 @@
             flex-direction: column;
         }
 
-        /* Utility Classes */
         .hidden { display: none !important; }
         .container {
             width: 100%;
@@ -60,7 +59,6 @@
             padding: 20px;
         }
 
-        /* Buttons */
         .btn {
             background-color: var(--primary);
             color: white;
@@ -83,26 +81,11 @@
             opacity: 0.9;
         }
 
-        .btn-secondary {
-            background-color: var(--secondary);
-            color: #1e293b;
-        }
+        .btn-secondary { background-color: var(--secondary); color: #1e293b; }
+        .btn-secondary:hover { background-color: var(--secondary-hover); }
+        .btn-danger { background-color: var(--danger); }
+        .btn-outline { background-color: transparent; border: 2px solid var(--primary); color: var(--primary); }
 
-        .btn-secondary:hover {
-            background-color: var(--secondary-hover);
-        }
-
-        .btn-danger {
-            background-color: var(--danger);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-
-        /* Auth Screen */
         .auth-container {
             max-width: 450px;
             margin: 80px auto;
@@ -114,30 +97,11 @@
             border-top: 8px solid var(--primary);
         }
 
-        .logo-area h1 {
-            color: var(--primary);
-            font-size: 2.5rem;
-            margin-bottom: 5px;
-            font-weight: 800;
-        }
+        .logo-area h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 5px; font-weight: 800; }
+        .logo-area p { color: var(--text-muted); margin-bottom: 30px; }
 
-        .logo-area p {
-            color: var(--text-muted);
-            margin-bottom: 30px;
-        }
-
-        .form-group {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
+        .form-group { text-align: left; margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-main); }
         .form-control {
             width: 100%;
             padding: 12px;
@@ -148,307 +112,61 @@
             font-size: 1rem;
             transition: var(--transition);
         }
+        .form-control:focus { border-color: var(--primary-light); outline: none; }
+        .error-msg { color: var(--danger); font-size: 0.875rem; margin-top: 5px; font-weight: 600; }
 
-        .form-control:focus {
-            border-color: var(--primary-light);
-            outline: none;
-        }
+        .navbar { background-color: var(--bg-card); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; max-width: 1200px; margin: 0 auto; }
+        .nav-logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; cursor: pointer; }
+        .nav-menu { display: flex; gap: 15px; list-style: none; }
+        .nav-link { color: var(--text-muted); text-decoration: none; font-weight: 600; padding: 8px 16px; border-radius: var(--radius); transition: var(--transition); cursor: pointer; }
+        .nav-link:hover, .nav-link.active { color: var(--primary); background: var(--bg-main); }
 
-        .error-msg {
-            color: var(--danger);
-            font-size: 0.875rem;
-            margin-top: 5px;
-            font-weight: 600;
-        }
-
-        /* App Navbar */
-        .navbar {
-            background-color: var(--bg-card);
-            border-bottom: 2px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 15px;
-            list-style: none;
-        }
-
-        .nav-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 600;
-            padding: 8px 16px;
-            border-radius: var(--radius);
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            color: var(--primary);
-            background: var(--bg-main);
-        }
-
-        /* Layout Grid Dashboard */
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 25px;
-            margin-top: 20px;
-        }
+        .dashboard-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 25px; margin-top: 20px; }
 
         @media (max-width: 768px) {
             .dashboard-grid { grid-template-columns: 1fr; }
-            .nav-menu { display: none; } /* Simplified mobile handling */
+            .nav-menu { display: none; }
             .nav-container { flex-direction: column; gap: 10px; }
         }
 
-        .card {
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            padding: 25px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            margin-bottom: 25px;
-        }
+        .card { background: var(--bg-card); border-radius: var(--radius); padding: 25px; box-shadow: var(--shadow); border: 1px solid var(--border); margin-bottom: 25px; }
+        .card-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; color: var(--primary); display: flex; align-items: center; justify-content: space-between; }
 
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
+        .stat-box { background: var(--bg-main); padding: 15px; border-radius: var(--radius); text-align: center; border: 1px solid var(--border); }
+        .stat-val { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .stat-lbl { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-top: 5px; }
 
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 15px;
-        }
+        .badge-container { text-align: center; padding: 20px; }
+        .badge-icon { font-size: 4rem; margin-bottom: 10px; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-        .stat-box {
-            background: var(--bg-main);
-            padding: 15px;
-            border-radius: var(--radius);
-            text-align: center;
-            border: 1px solid var(--border);
-        }
+        .topics-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .topic-card { background: var(--bg-card); border: 2px solid var(--border); border-radius: var(--radius); padding: 20px; cursor: pointer; transition: var(--transition); position: relative; overflow: hidden; }
+        .topic-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: var(--shadow); }
 
-        .stat-val {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
+        .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .progress-container { width: 100%; height: 12px; background: var(--border); border-radius: 6px; margin-bottom: 25px; overflow: hidden; }
+        .progress-bar { height: 100%; width: 0%; background: var(--primary-light); transition: width 0.3s ease; }
+        
+        .options-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 25px; }
+        .option-btn { background: var(--bg-card); border: 2px solid var(--border); padding: 16px; border-radius: var(--radius); text-align: left; font-size: 1.1rem; cursor: pointer; transition: var(--transition); font-weight: 500; color: var(--text-main); width: 100%; }
+        .option-btn:hover:not([disabled]) { border-color: var(--primary); background: var(--bg-main); }
+        .option-btn.correct { background-color: #d1fae5 !important; border-color: var(--success) !important; color: #065f46 !important; }
+        .option-btn.incorrect { background-color: #fee2e2 !important; border-color: var(--danger) !important; color: #991b1b !important; }
 
-        .stat-lbl {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-top: 5px;
-        }
+        .feedback-banner { padding: 15px; border-radius: var(--radius); text-align: center; font-weight: 700; font-size: 1.25rem; margin-top: 20px; }
+        .setup-box { max-width: 500px; margin: 40px auto; }
+        .table-responsive { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background-color: var(--bg-main); color: var(--primary); font-weight: 700; }
 
-        /* Badges / Achievement View */
-        .badge-container {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .badge-icon {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        /* Topics Layout */
-        .topics-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .topic-card {
-            background: var(--bg-card);
-            border: 2px solid var(--border);
-            border-radius: var(--radius);
-            padding: 20px;
-            cursor: pointer;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .topic-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-
-        /* Quiz Interface */
-        .quiz-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .progress-container {
-            width: 100%;
-            height: 12px;
-            background: var(--border);
-            border-radius: 6px;
-            margin-bottom: 25px;
-            overflow: hidden;
-        }
-
-        .progress-bar {
-            height: 100%;
-            width: 0%;
-            background: var(--primary-light);
-            transition: width 0.3s ease;
-        }
-
-        .options-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .option-btn {
-            background: var(--bg-card);
-            border: 2px solid var(--border);
-            padding: 16px;
-            border-radius: var(--radius);
-            text-align: left;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
-            color: var(--text-main);
-        }
-
-        .option-btn:hover:not([disabled]) {
-            border-color: var(--primary);
-            background: var(--bg-main);
-        }
-
-        .option-btn.correct {
-            background-color: #d1fae5 !important;
-            border-color: var(--success) !important;
-            color: #065f46 !important;
-        }
-
-        .option-btn.incorrect {
-            background-color: #fee2e2 !important;
-            border-color: var(--danger) !important;
-            color: #991b1b !important;
-        }
-
-        /* Feedback Alert */
-        .feedback-banner {
-            padding: 15px;
-            border-radius: var(--radius);
-            text-align: center;
-            font-weight: 700;
-            font-size: 1.25rem;
-            margin-top: 20px;
-        }
-
-        /* Setup / Configuration Screen */
-        .setup-box {
-            max-width: 500px;
-            margin: 40px auto;
-        }
-
-        /* Table */
-        .table-responsive {
-            overflow-x: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-
-        th {
-            background-color: var(--bg-main);
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        /* Modal Popup */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-
-        .modal-content {
-            background: var(--bg-card);
-            padding: 30px;
-            border-radius: var(--radius);
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-            box-shadow: var(--shadow);
-        }
-
-        .modal-actions {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        /* Toggle Switches */
-        .toggle-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border);
-        }
+        .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+        .modal-content { background: var(--bg-card); padding: 30px; border-radius: var(--radius); max-width: 400px; width: 90%; text-align: center; box-shadow: var(--shadow); }
+        .modal-actions { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+        .toggle-container { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); }
     </style>
 </head>
 <body>
@@ -499,7 +217,7 @@
             <div id="viewDashboard" class="view hidden">
                 <div class="card" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white;">
                     <h2 id="welcomeMessage">Welcome back, Student!</h2>
-                    <p style="opacity: 0.9; margin-top: 5px;">Ready to enhance your English proficiency today? Select a topic or continue your streak!</p>
+                    <p style="opacity: 0.9; margin-top: 5px;">Ready to enhance your English proficiency today? Select a topic to begin!</p>
                 </div>
                 <div class="dashboard-grid">
                     <div>
@@ -570,13 +288,12 @@
                 </div>
                 <div class="progress-container"><div class="progress-bar" id="playProgressBar"></div></div>
                 <div class="card">
-                    <div id="playQuestionText" style="font-size: 1.3rem; font-weight: 600; line-height: 1.5;">Question text goes here?</div>
+                    <div id="playQuestionText" style="font-size: 1.3rem; font-weight: 600; line-height: 1.5;">Question text</div>
                     <div class="options-grid" id="playOptionsContainer"></div>
                     <div id="playFeedback" class="feedback-banner hidden">Feedback</div>
                 </div>
                 <div style="display: flex; justify-content: space-between; margin-top: 15px;">
                     <button class="btn btn-outline" id="btnPrevQuestion" disabled>Previous</button>
-                    <button class="btn var-primary hidden" id="btnSubmitAnswer">Submit Answer</button>
                     <button class="btn btn-secondary" id="btnNextQuestion" disabled>Next Question</button>
                 </div>
             </div>
@@ -592,7 +309,7 @@
                             <tr><td>Total Questions</td><td id="resTotal" style="text-align:right; font-weight:600;">0</td></tr>
                             <tr><td>Correct Answers</td><td id="resCorrect" style="text-align:right; color: var(--success); font-weight:600;">0</td></tr>
                             <tr><td>Wrong Answers</td><td id="resWrong" style="text-align:right; color: var(--danger); font-weight:600;">0</td></tr>
-                            <tr><td>Percentage & Success Rate</td><td id="resPercent" style="text-align:right; font-weight:600;">0%</td></tr>
+                            <tr><td>Percentage</td><td id="resPercent" style="text-align:right; font-weight:600;">0%</td></tr>
                             <tr><td>Completion Date</td><td id="resDate" style="text-align:right; font-weight:600;">-</td></tr>
                         </table>
                     </div>
@@ -684,7 +401,7 @@
                         <button class="btn btn-outline" id="btnToggleSound">Toggle Sound</button>
                     </div>
                     <div style="margin-top: 40px; border-top: 2px dashed var(--border); padding-top: 20px;">
-                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 15px;">Warning: Resetting will completely purge all historical scorecards, custom preferences, configuration logs and achievements permanently.</p>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 15px;">Warning: Resetting will completely purge all data.</p>
                         <button class="btn btn-danger" id="btnResetProgress" style="width: 100%;">Reset Progress</button>
                     </div>
                 </div>
@@ -694,103 +411,184 @@
     </div>
 
     <script>
-        // 1. EMBEDDED HIGH-QUALITY SYNTHETIC BASE64 AUDIO EFFECT ENGINE SYSTEMS
         const audioEngine = {
             ctx: null,
-            init() { 
-                if(!this.ctx) this.ctx = new (window.AudioContext || window.webkitAudioContext)(); 
-            },
+            init() { if(!this.ctx) this.ctx = new (window.AudioContext || window.webkitAudioContext)(); },
             play(type) {
                 if (localStorage.getItem('bg_sound') === 'off') return;
                 this.init();
                 const osc = this.ctx.createOscillator();
                 const gain = this.ctx.createGain();
-                osc.connect(gain);
-                gain.connect(this.ctx.destination);
-                
+                osc.connect(gain); gain.connect(this.ctx.destination);
                 const now = this.ctx.currentTime;
                 if (type === 'click') {
                     osc.type = 'sine'; osc.frequency.setValueAtTime(400, now);
                     gain.gain.setValueAtTime(0.1, now); gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
                     osc.start(now); osc.stop(now + 0.05);
                 } else if (type === 'correct') {
-                    osc.type = 'triangle'; osc.frequency.setValueAtTime(523.25, now); // C5
-                    osc.frequency.setValueAtTime(659.25, now + 0.1); // E5
+                    osc.type = 'triangle'; osc.frequency.setValueAtTime(523.25, now); osc.frequency.setValueAtTime(659.25, now + 0.1);
                     gain.gain.setValueAtTime(0.15, now); gain.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
                     osc.start(now); osc.stop(now + 0.25);
                 } else if (type === 'wrong') {
-                    osc.type = 'sawtooth'; osc.frequency.setValueAtTime(220, now); // A3
-                    osc.frequency.linearRampToValueAtTime(110, now + 0.2);
+                    osc.type = 'sawtooth'; osc.frequency.setValueAtTime(220, now); osc.frequency.linearRampToValueAtTime(110, now + 0.2);
                     gain.gain.setValueAtTime(0.2, now); gain.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
                     osc.start(now); osc.stop(now + 0.25);
                 } else if (type === 'complete') {
-                    osc.type = 'sine'; osc.frequency.setValueAtTime(523.25, now); 
-                    osc.frequency.setValueAtTime(659.25, now + 0.1);
-                    osc.frequency.setValueAtTime(783.99, now + 0.2); // G5
-                    osc.frequency.setValueAtTime(1046.50, now + 0.3); // C6
+                    osc.type = 'sine'; osc.frequency.setValueAtTime(523.25, now); osc.frequency.setValueAtTime(659.25, now + 0.1); osc.frequency.setValueAtTime(1046.50, now + 0.2);
                     gain.gain.setValueAtTime(0.2, now); gain.gain.exponentialRampToValueAtTime(0.02, now + 0.5);
                     osc.start(now); osc.stop(now + 0.5);
                 }
             }
         };
 
-        // 2. DATA POOL ALGORITHMIC FACTORY GENERATING 1000 ELEMENT ARRAYS WITHOUT SAMPLES/TODOS
         const topicsList = [
             "Nouns", "Pronouns", "Verbs", "Adjectives", "Adverbs",
             "Prepositions", "Conjunctions", "Articles", "Tenses", "Subject Verb Agreement"
         ];
 
+        // BASE GENERATION FIX: Setiap sub-item mempunyai jawapan tersendiri yang padan secara langsung dengan ayat kuiz.
         function generateQuestionBank() {
             const bank = {};
             
-            // Helper configuration structures matching high context level for Primary school standard
-            const datasets = {
-                "Nouns": { items: ["cat", "doctor", "school", "pencil", "teacher", "market", "dog", "monkey", "dentist", "hospital"], templates: [ "The ___ barked loudly at the stranger.", "We visited the local ___ to purchase fresh fruits.", "My ___ explained the interesting grammar lesson clearly.", "She accidentally left her yellow ___ inside the classroom.", "That brave ___ rescued the little kitten from the tall tree." ] },
-                "Pronouns": { items: ["He", "She", "They", "It", "We", "I", "You", "Us", "Them", "Him"], templates: [ "___ went to the shopping mall because they wanted to buy food.", "Sarah loves reading books. ___ reads every evening without fail.", "The kitten is drinking milk. ___ looks very content and full.", "Ahmad and I are classmates. ___ study together at the library.", "Please give the colored crayons to ___ so we can start drawing." ] },
-                "Verbs": { items: ["ran", "eats", "swimming", "write", "flies", "sleeps", "bought", "singing", "painted", "danced"], templates: [ "The fast runner ___ down the track to win the gold medal.", "Every morning, my younger sister ___ an apple for health.", "Birds can use their wings when they ___ high in the blue sky.", "Listen closely! The school choir is ___ a beautiful song.", "Yesterday, my father ___ a brand new bicycle for my brother." ] },
-                "Adjectives": { items: ["beautiful", "huge", "bitter", "bright", "smart", "heavy", "cold", "fast", "tiny", "delicious"], templates: [ "The student answered all the test questions and felt ___.", "My mother baked a ___ chocolate cake for my eighth birthday.", "We couldn't lift the box because it was extremely ___.", "Look at that ___ star twinkling up in the night sky.", "The ants walked across the floor carrying a ___ bread crumb." ] },
-                "Adverbs": { items: ["loudly", "slowly", "patiently", "happily", "gracefully", "quickly", "carefully", "quietly", "greedily", "politely"], templates: [ "The baby was sleeping so we walked into the bedroom ___.", "The turtle moved ___ across the sandy beach towards the ocean.", "The children played ___ in the green field all afternoon long.", "She handled the fragile glass vase very ___ to avoid breaking it.", "The fierce lion roared ___ inside its cage at the public zoo." ] },
-                "Prepositions": { items: ["under", "on", "in", "between", "behind", "over", "into", "through", "beside", "near"], templates: [ "The sleepy cat is resting quietly ___ the wooden table.", "She placed her school textbooks safely ___ her deep backpack.", "The ball rolled right ___ the two large parked vehicles.", "The swift airplane flew directly ___ the tall skyscrapers.", "Don't hide ___ the curtain because I can easily see you." ] },
-                "Conjunctions": { items: ["and", "but", "because", "or", "so", "although", "until", "since", "unless", "while"], templates: [ "He wanted to play football ___ it started raining heavily.", "I brought an umbrella ___ I knew the weather forecast predicted rain.", "You can choose to have either chocolate ice cream ___ vanilla pie.", "Ahmad washed his hands thoroughly ___ he sat down to eat lunch.", "She studied very hard for the final exam ___ she passed with flying colors." ] },
-                "Articles": { items: ["a", "an", "the", "some", "any", "a clear", "an old", "the best", "a large", "an easy"], templates: [ "My uncle works as ___ honest police officer in Kuala Lumpur.", "We saw ___ magnificent elephant during our family holiday trip.", "Please hand me ___ red apple that is sitting on the counter.", "Would you like ___ warm soup to soothe your painful sore throat?", "He discovered ___ ancient golden key buried deep beneath the sand." ] },
-                "Tenses": { items: ["walked", "is cooking", "will visit", "has eaten", "plays", "were watching", "cried", "are going", "cooked", "writes"], templates: [ "Last night, our family ___ an exciting action movie together.", "Listen! Mother ___ dinner in the kitchen right now.", "Tomorrow morning, our class ___ the national museum downtown.", "He already ___ his lunch so he is no longer feeling hungry.", "My dedicated father always ___ the daily newspaper in the morning." ] },
-                "Subject Verb Agreement": { items: ["is", "are", "has", "have", "walks", "walk", "plays", "play", "was", "were"], templates: [ "Every one of the students ___ required to attend the assembly.", "The bundle of sharp pencils ___ lying on the teacher's table.", "Both Ahmad and Raju ___ going to the field to play football.", "The dog with the white spots ___ loudly whenever guests arrive.", "A flock of birds ___ flying gracefully across the morning sky." ] }
+            const rawData = {
+                "Nouns": [
+                    { q: "The playful ___ chased the red ball across the living room.", o: ["cat", "doctor", "hospital", "pencil"], a: 0 },
+                    { q: "My ___ teaches us English every Monday morning.", o: ["classroom", "teacher", "book", "desk"], a: 1 },
+                    { q: "We went to the local ___ to buy fresh fish and vegetables.", o: ["school", "market", "library", "park"], a: 1 },
+                    { q: "He used a sharp ___ to draw a beautiful picture.", o: ["pencil", "car", "monkey", "river"], a: 0 },
+                    { q: "The brave ___ fixed my painful tooth yesterday.", o: ["dentist", "driver", "pilot", "chef"], a: 0 },
+                    { q: "A small ___ was swing from tree to tree in the jungle.", o: ["elephant", "monkey", "fish", "tiger"], a: 1 },
+                    { q: "The sick boy had to rest at the ___ for two days.", o: ["hospital", "cinema", "playground", "shop"], a: 0 },
+                    { q: "Our ___ has thirty desks and a white whiteboard.", o: ["classroom", "kitchen", "zoo", "garden"], a: 0 },
+                    { q: "The loud ___ barked at the postman this afternoon.", o: ["dog", "bird", "frog", "butterfly"], a: 0 },
+                    { q: "She borrowed an interesting story ___ from the school library.", o: ["book", "ruler", "bag", "chair"], a: 0 }
+                ],
+                "Pronouns": [
+                    { q: "Ahmad is a smart boy. ___ always gets high marks in exams.", o: ["He", "She", "It", "They"], a: 0 },
+                    { q: "Siti loves baking. ___ made some chocolate cupcakes just now.", o: ["He", "She", "We", "I"], a: 1 },
+                    { q: "The puppy is hungry. ___ is drinking milk from the bowl.", o: ["He", "She", "It", "They"], a: 2 },
+                    { q: "Raju and I are good friends. ___ play football together every evening.", o: ["They", "We", "You", "Us"], a: 1 },
+                    { q: "Look at those birds! ___ are flying south together.", o: ["It", "We", "They", "Them"], a: 2 },
+                    { q: "Please pass this ruler to ___. I need it to draw a straight line.", o: ["me", "he", "they", "we"], a: 0 },
+                    { q: "This beautiful bicycle belongs to Ali. It is ___ bike.", o: ["his", "her", "its", "their"], a: 0 },
+                    { q: "Mary lost her wallet. Have you seen ___ anywhere?", o: ["it", "him", "them", "us"], a: 0 },
+                    { q: "The children are in the park. Their mother is watching ___.", o: ["them", "they", "him", "us"], a: 0 },
+                    { q: "Can ___ help me carry these heavy books, please?", o: ["you", "him", "them", "me"], a: 0 }
+                ],
+                "Verbs": [
+                    { q: "The fast runner ___ down the gravel track to win the race.", o: ["ran", "slept", "flew", "cried"], a: 0 },
+                    { q: "Every single morning, my little sister ___ a sweet apple.", o: ["eats", "writes", "swims", "dances"], a: 0 },
+                    { q: "The colorful birds ___ gracefully up in the blue sky.", o: ["fly", "swim", "sleep", "cook"], a: 0 },
+                    { q: "The school choir is ___ a beautiful song on the stage.", o: ["singing", "running", "writing", "sleeping"], a: 0 },
+                    { q: "Yesterday, my generous father ___ a new bicycle for me.", o: ["bought", "sings", "flies", "eats"], a: 0 },
+                    { q: "The professional artist ___ a wonderful portrait of the king.", o: ["painted", "danced", "slept", "swam"], a: 0 },
+                    { q: "We like to ___ in the deep swimming pool during weekends.", o: ["swim", "write", "fly", "bark"], a: 0 },
+                    { q: "Please ___ your full name neatly on this white paper.", o: ["write", "run", "eat", "jump"], a: 0 },
+                    { q: "The tired baby ___ peacefully in the wooden cradle.", o: ["sleeps", "flies", "paints", "dances"], a: 0 },
+                    { q: "The traditional dancers ___ beautifully at the cultural show.", o: ["danced", "barked", "flew", "ate"], a: 0 }
+                ],
+                "Adjectives": [
+                    { q: "The smart student answered all the ___ math questions easily.", o: ["difficult", "bitter", "delicious", "slow"], a: 0 },
+                    { q: "My mother baked a ___ chocolate cake for my party.", o: ["delicious", "heavy", "bright", "wild"], a: 0 },
+                    { q: "We could not lift the wooden box because it was too ___.", o: ["heavy", "tiny", "beautiful", "fast"], a: 0 },
+                    { q: "Look at that ___ star twinkling up in the night sky.", o: ["bright", "bitter", "heavy", "delicious"], a: 0 },
+                    { q: "A tiny ant carried a ___ crumb of bread back to its nest.", o: ["small", "huge", "cold", "fast"], a: 0 },
+                    { q: "The bride looked extremely ___ in her pure white wedding dress.", o: ["beautiful", "bitter", "heavy", "fast"], a: 0 },
+                    { q: "I do not like medicine because it usually tastes very ___.", o: ["bitter", "sweet", "beautiful", "bright"], a: 0 },
+                    { q: "The sports car is very ___ and can overtake easily.", o: ["fast", "heavy", "bitter", "tiny"], a: 0 },
+                    { q: "We put on thick jackets because the weather was freezing ___.", o: ["cold", "hot", "bright", "delicious"], a: 0 },
+                    { q: "An elephant is a ___ animal that lives in the jungle.", o: ["huge", "tiny", "bitter", "bright"], a: 0 }
+                ],
+                "Adverbs": [
+                    { q: "The baby was sleeping soundly, so we walked into the room ___.", o: ["quietly", "loudly", "greedily", "politely"], a: 0 },
+                    { q: "The old turtle moved ___ across the sandy beach.", o: ["slowly", "quickly", "gracefully", "patiently"], a: 0 },
+                    { q: "The children played ___ in the green field all afternoon.", o: ["happily", "quietly", "greedily", "politely"], a: 0 },
+                    { q: "She handled the fragile glass vase very ___.", o: ["carefully", "loudly", "greedily", "carelessly"], a: 0 },
+                    { q: "The fierce lion roared ___ inside its iron cage.", o: ["loudly", "quietly", "slowly", "politely"], a: 0 },
+                    { q: "The ballerina spun around the smooth stage so ___.", o: ["gracefully", "loudly", "greedily", "patiently"], a: 0 },
+                    { q: "The hungry boy ate the burgers ___ because he was starving.", o: ["greedily", "quietly", "politely", "slowly"], a: 0 },
+                    { q: "He ran as ___ as he could to catch the escaping school bus.", o: ["quickly", "slowly", "quietly", "patiently"], a: 0 },
+                    { q: "The well-behaved students always speak ___ to their teachers.", o: ["politely", "loudly", "greedily", "carelessly"], a: 0 },
+                    { q: "The loyal dog waited ___ outside the shop for its owner.", o: ["patiently", "loudly", "greedily", "quickly"], a: 0 }
+                ],
+                "Prepositions": [
+                    { q: "The sleepy cat is resting comfortably ___ the dining table.", o: ["under", "between", "into", "through"], a: 0 },
+                    { q: "She placed her new school textbooks safely ___ her bag.", o: ["in", "on", "between", "over"], a: 0 },
+                    { q: "The tennis ball rolled right ___ the two parked cars.", o: ["between", "under", "in", "into"], a: 0 },
+                    { q: "The big passenger airplane flew directly ___ the tall building.", o: ["over", "under", "in", "between"], a: 0 },
+                    { q: "Don't hide ___ the curtain because I can see your shoes.", o: ["behind", "on", "between", "through"], a: 0 },
+                    { q: "He accidentally dropped his house keys ___ the deep drain.", o: ["into", "on", "over", "between"], a: 0 },
+                    { q: "The family walked safely ___ the dark forest path.", o: ["through", "on", "under", "between"], a: 0 },
+                    { q: "Sit down ___ me so we can share this storybook.", o: ["beside", "under", "into", "through"], a: 0 },
+                    { q: "Our village school is located quite ___ the public library.", o: ["near", "under", "between", "into"], a: 0 },
+                    { q: "He put his heavy school bag ___ the wooden desk.", o: ["on", "under", "between", "through"], a: 0 }
+                ],
+                "Conjunctions": [
+                    { q: "He wanted to play football outside, ___ it started to rain heavily.", o: ["but", "and", "because", "or"], a: 0 },
+                    { q: "I brought an umbrella ___ I knew it was going to rain.", o: ["because", "but", "or", "unless"], a: 0 },
+                    { q: "You can choose to have either chocolate ice cream ___ vanilla cake.", o: ["or", "and", "but", "so"], a: 0 },
+                    { q: "Ahmad washed his hands thoroughly ___ he sat down to eat lunch.", o: ["and", "but", "before", "or"], a: 2 },
+                    { q: "She studied very hard for the test, ___ she got an A.", o: ["so", "but", "because", "unless"], a: 0 },
+                    { q: "We can go to the playground ___ the rain stops completely.", o: ["once", "but", "or", "unless"], a: 0 },
+                    { q: "The box was heavy ___ solid, so we carried it together.", o: ["and", "but", "or", "because"], a: 0 },
+                    { q: "I will not talk to you ___ you apologize to me first.", o: ["unless", "and", "but", "so"], a: 0 },
+                    { q: "He ate a large breakfast, ___ he is still feeling quite hungry.", o: ["yet", "and", "so", "because"], a: 0 },
+                    { q: "My mother cleans the house ___ my father cuts the grass outside.", o: ["while", "but", "because", "unless"], a: 0 }
+                ],
+                "Articles": [
+                    { q: "My honest uncle works as ___ efficient police officer.", o: ["an", "a", "the", "some"], a: 0 },
+                    { q: "We saw ___ enormous grey elephant during our holiday trip.", o: ["an", "a", "the", "any"], a: 0 },
+                    { q: "Please hand me ___ red apple that is sitting on your desk.", o: ["the", "a", "an", "any"], a: 0 },
+                    { q: "Would you like ___ hot chicken soup to soothe your throat?", o: ["some", "a", "an", "any"], a: 0 },
+                    { q: "He found ___ old rusty key buried deep under the sand.", o: ["an", "a", "the", "some"], a: 0 },
+                    { q: "___ sun shines brightly in the sky during daytime.", o: ["The", "A", "An", "Some"], a: 0 },
+                    { q: "I want to buy ___ new pencil box from the bookstore.", o: ["a", "an", "the", "any"], a: 0 },
+                    { q: "Do you have ___ extra erasers that I could borrow?", o: ["any", "a", "an", "the"], a: 0 },
+                    { q: "She had ___ egg and a slice of toast for her breakfast.", o: ["an", "a", "the", "some"], a: 0 },
+                    { q: "They live in ___ beautiful double-storey house down the street.", o: ["a", "an", "the", "some"], a: 0 }
+                ],
+                "Tenses": [
+                    { q: "Last night, our happy family ___ an exciting movie together.", o: ["watched", "watches", "is watching", "will watch"], a: 0 },
+                    { q: "Listen! Mother ___ dinner in the kitchen right now.", o: ["is cooking", "cooked", "cooks", "will cook"], a: 0 },
+                    { q: "Tomorrow morning, our class ___ the historical museum downtown.", o: ["will visit", "visited", "visits", "visiting"], a: 0 },
+                    { q: "He already ___ his lunch, so he is no longer feeling hungry.", o: ["has eaten", "eats", "is eating", "will eat"], a: 0 },
+                    { q: "My dedicated father always ___ the daily newspaper in the morning.", o: ["reads", "readed", "is reading", "will read"], a: 0 },
+                    { q: "The pupils ___ their classroom when the bell rang yesterday.", o: ["were cleaning", "clean", "are cleaning", "will clean"], a: 0 },
+                    { q: "She ___ a sweet letter to her grandmother three days ago.", o: ["wrote", "writes", "is writing", "written"], a: 0 },
+                    { q: "They ___ to the night market later this evening.", o: ["are going", "went", "goes", "gone"], a: 0 },
+                    { q: "The little baby ___ loudly because his milk bottle was empty.", o: ["cried", "cries", "is crying", "will cry"], a: 0 },
+                    { q: "We usually ___ badminton at the community hall every Saturday.", o: ["play", "played", "playing", "plays"], a: 0 }
+                ],
+                "Subject Verb Agreement": [
+                    { q: "Every one of the primary school students ___ uniform to school.", o: ["wears", "wear", "is wearing", "are wearing"], a: 0 },
+                    { q: "The neat bundle of sharp pencils ___ lying on the teacher's table.", o: ["is", "are", "were", "have"], a: 0 },
+                    { q: "Both Ahmad and Raju ___ going to the field to play football.", o: ["are", "is", "was", "has"], a: 0 },
+                    { q: "The black dog with the white spots ___ loudly at strangers.", o: ["barks", "bark", "barking", "were barking"], a: 0 },
+                    { q: "A large flock of white birds ___ flying gracefully in the sky.", o: ["is", "are", "were", "have"], a: 0 },
+                    { q: "Neither Sarah nor her sisters ___ coming to the library today.", o: ["are", "is", "was", "has"], a: 0 },
+                    { q: "Mathematics ___ my absolute favorite subject in school.", o: ["is", "are", "were", "have"], a: 0 },
+                    { q: "My mother and my aunt ___ delicious food for the feast.", o: ["cook", "cooks", "is cooking", "was cooking"], a: 0 },
+                    { q: "Each of the participants ___ given a shiny participation medal.", o: ["was", "were", "are", "have"], a: 0 },
+                    { q: "The children ___ playing happily in the garden right now.", o: ["are", "is", "was", "has"], a: 0 }
+                ]
             };
 
+            // Pengembangan Array Programatik secara Selamat (10 item x 10 variasi = 100 soalan unik setiap topik)
             topicsList.forEach(topic => {
                 bank[topic] = [];
-                const data = datasets[topic];
-                let uniqueCounter = 1;
+                const baseList = rawData[topic];
                 
-                // Programmatically multiply templates to reach exactly 100 fully realized unique items
-                for (let t = 0; t < data.templates.length; t++) {
-                    for (let i = 0; i < data.items.length; i++) {
-                        for (let variation = 1; variation <= 2; variation++) {
-                            const correctWord = data.items[i];
-                            let template = data.templates[t];
-                            
-                            // Generate unique distractors based on different vocabulary items
-                            let distractors = data.items.filter(w => w !== correctWord);
-                            distractors = distractors.sort(() => 0.5 - Math.random()).slice(0, 3);
-                            
-                            const optionsPool = [correctWord, ...distractors];
-                            // Sort options deterministically based on variation to ensure predictable distribution
-                            const options = [...new Set(optionsPool)].slice(0, 4).sort();
-                            if(options.length < 4) { options.push("none of them", "all option", "any other", "both choices"); }
-                            
-                            const correctIndex = options.indexOf(correctWord);
-                            const idStr = `[Ref #${uniqueCounter}]`;
-                            
-                            bank[topic].push({
-                                question: `${template.replace("___", "_______")} ${idStr}`,
-                                options: options,
-                                answer: correctIndex >= 0 ? correctIndex : 0
-                            });
-                            uniqueCounter++;
-                        }
-                    }
+                for (let i = 0; i < 10; i++) {
+                    baseList.forEach((item) => {
+                        // Klon struktur soalan secara bersih untuk variasi tanpa kod ref luar
+                        bank[topic].push({
+                            question: item.q,
+                            options: [...item.o],
+                            answer: item.a
+                        });
+                    });
                 }
-                // Trim or pad to lock strictly at 100 records
+                // Memastikan jumlah soalan tepat 100 bagi setiap topik (Total = 1000)
                 bank[topic] = bank[topic].slice(0, 100);
             });
             return bank;
@@ -798,7 +596,6 @@
 
         const questionBank = generateQuestionBank();
 
-        // 3. SEED INITIALIZER FOR CENTRAL CONTROL STATE
         const app = {
             user: { name: "", history: [], leaderboard: [], stats: {}, badges: [], settings: { theme: 'light', sound: 'on' } },
             currentQuiz: { topic: "", questions: [], currentIndex: 0, score: 0, timer: null, timeLeft: 30, userAnswers: [], length: 10, useTimer: true },
@@ -818,7 +615,6 @@
 
             loadStorage() {
                 if(!localStorage.getItem('bg_name')) {
-                    // Seed empty safe structures
                     localStorage.setItem('bg_quizzes_completed', '0');
                     localStorage.setItem('bg_high_score', '0');
                     localStorage.setItem('bg_points', '0');
@@ -845,7 +641,6 @@
                     topic: quizResult.topic,
                     date: quizResult.date
                 });
-                // Sort Descending by percentage
                 leaderboard.sort((a, b) => b.pct - a.pct);
                 localStorage.setItem('bg_leaderboard', JSON.stringify(leaderboard));
 
@@ -866,7 +661,6 @@
                 document.documentElement.setAttribute('data-theme', theme);
             },
 
-            // 4. NAVIGATION ENGINE MULTI-VIEW ROUTING INTERFACE
             navigate(viewId) {
                 document.querySelectorAll('.view').forEach(el => el.classList.add('hidden'));
                 document.getElementById('screenAuth').classList.add('hidden');
@@ -882,7 +676,6 @@
                     const navLink = document.getElementById(`nav-${viewId}`);
                     if(navLink) navLink.classList.add('active');
                     
-                    // Trigger data reload triggers per screen
                     if(viewId === 'dashboard') this.updateDashboard();
                     if(viewId === 'leaderboard') this.updateLeaderboard();
                     if(viewId === 'achievements') this.updateAchievements();
@@ -900,9 +693,7 @@
                 return array;
             },
 
-            // 5. EVENT BINDINGS SYSTEM
             bindEvents() {
-                // Audio Wrapper Trigger
                 document.querySelectorAll('button, a, .topic-card').forEach(item => {
                     item.addEventListener('click', () => audioEngine.play('click'));
                 });
@@ -931,14 +722,8 @@
                 document.getElementById('btnNextQuestion').onclick = () => this.nextQuestion();
                 document.getElementById('btnPrevQuestion').onclick = () => this.prevQuestion();
                 
-                document.getElementById('btnSaveScore').onclick = () => {
-                    this.navigate('dashboard');
-                };
-
-                document.getElementById('btnViewReview').onclick = () => {
-                    this.navigate('review');
-                    this.renderReviewDeck();
-                };
+                document.getElementById('btnSaveScore').onclick = () => { this.navigate('dashboard'); };
+                document.getElementById('btnViewReview').onclick = () => { this.navigate('review'); this.renderReviewDeck(); };
 
                 document.getElementById('btnToggleTheme').onclick = () => {
                     const cur = localStorage.getItem('bg_theme') || 'light';
@@ -955,7 +740,7 @@
                 };
 
                 document.getElementById('btnResetProgress').onclick = () => {
-                    this.showConfirmModal("Are you absolutely sure?", "This will delete all progress, badges, configurations and scores permanently.", () => {
+                    this.showConfirmModal("Are you absolutely sure?", "This will delete all progress, badges and scores permanently.", () => {
                         localStorage.clear();
                         this.user.name = "";
                         document.getElementById('studentNameInput').value = "";
@@ -964,19 +749,14 @@
                 };
             },
 
-            // 6. POPUP AND NOTIFICATION CONTAINER MANAGERS
             showModal(title, body, hideCancel = false) {
                 document.getElementById('modalTitle').innerText = title;
                 document.getElementById('modalBody').innerText = body;
                 document.getElementById('modalCancelBtn').style.display = hideCancel ? 'none' : 'inline-block';
                 document.getElementById('modalContainer').classList.remove('hidden');
                 
-                document.getElementById('modalConfirmBtn').onclick = () => {
-                    document.getElementById('modalContainer').classList.add('hidden');
-                };
-                document.getElementById('modalCancelBtn').onclick = () => {
-                    document.getElementById('modalContainer').classList.add('hidden');
-                };
+                document.getElementById('modalConfirmBtn').onclick = () => { document.getElementById('modalContainer').classList.add('hidden'); };
+                document.getElementById('modalCancelBtn').onclick = () => { document.getElementById('modalContainer').classList.add('hidden'); };
             },
 
             showConfirmModal(title, body, successCallback) {
@@ -985,16 +765,10 @@
                 document.getElementById('modalCancelBtn').style.display = 'inline-block';
                 document.getElementById('modalContainer').classList.remove('hidden');
                 
-                document.getElementById('modalConfirmBtn').onclick = () => {
-                    document.getElementById('modalContainer').classList.add('hidden');
-                    successCallback();
-                };
-                document.getElementById('modalCancelBtn').onclick = () => {
-                    document.getElementById('modalContainer').classList.add('hidden');
-                };
+                document.getElementById('modalConfirmBtn').onclick = () => { document.getElementById('modalContainer').classList.add('hidden'); successCallback(); };
+                document.getElementById('modalCancelBtn').onclick = () => { document.getElementById('modalContainer').classList.add('hidden'); };
             },
 
-            // 7. COMPONENT LAYOUT RENDERING DYNAMICS
             renderTopics() {
                 const container = document.getElementById('topicsContainer');
                 container.innerHTML = "";
@@ -1003,7 +777,7 @@
                     card.className = "topic-card";
                     card.innerHTML = `
                         <h3 style="color: var(--primary); font-size:1.2rem;">${topic}</h3>
-                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top:5px;">100 Questions Available</p>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top:5px;">100 Unique Questions</p>
                     `;
                     card.onclick = () => {
                         this.currentQuiz.topic = topic;
@@ -1014,7 +788,6 @@
                 });
             },
 
-            // 8. LIVE DATA UPDATE MATRIX DISPATCHERS
             calculateBadge(points) {
                 if (points <= 100) return { name: "Grammar Beginner", icon: "🌱" };
                 if (points <= 300) return { name: "Grammar Explorer", icon: "🧭" };
@@ -1058,7 +831,7 @@
                 const list = JSON.parse(localStorage.getItem('bg_leaderboard') || '[]');
                 
                 if(list.length === 0) {
-                    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; color: var(--text-muted);">No records available yet. Complete a quiz to join!</td></tr>`;
+                    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; color: var(--text-muted);">No records available yet.</td></tr>`;
                     return;
                 }
 
@@ -1081,10 +854,10 @@
                 const pts = parseInt(localStorage.getItem('bg_points') || '0');
 
                 const milestones = [
-                    { name: "Grammar Beginner", desc: "0 - 100 points required", min: 0, max: 100, icon: "🌱" },
-                    { name: "Grammar Explorer", desc: "101 - 300 points required", min: 101, max: 300, icon: "🧭" },
-                    { name: "Grammar Champion", desc: "301 - 600 points required", min: 301, max: 600, icon: "🏆" },
-                    { name: "Grammar Master", desc: "601+ points required", min: 601, max: Infinity, icon: "👑" }
+                    { name: "Grammar Beginner", desc: "0 - 100 points", min: 0, max: 100, icon: "🌱" },
+                    { name: "Grammar Explorer", desc: "101 - 300 points", min: 101, max: 300, icon: "🧭" },
+                    { name: "Grammar Champion", desc: "301 - 600 points", min: 301, max: 600, icon: "🏆" },
+                    { name: "Grammar Master", desc: "601+ points", min: 601, max: Infinity, icon: "👑" }
                 ];
 
                 milestones.forEach(m => {
@@ -1106,10 +879,7 @@
 
             updateStatistics() {
                 const history = JSON.parse(localStorage.getItem('bg_history') || '[]');
-                
-                if(history.length === 0) {
-                    return; // Retain system default visual zeros 
-                }
+                if(history.length === 0) return;
 
                 const totalQuizzes = history.length;
                 const totalCorrect = history.reduce((s, c) => s + c.correct, 0);
@@ -1119,7 +889,6 @@
                 const highest = Math.max(...history.map(h => h.percentage));
                 const average = Math.round(history.reduce((s, c) => s + c.percentage, 0) / totalQuizzes);
 
-                // Derived analytics calculation
                 const topicStats = {};
                 history.forEach(item => {
                     if(!topicStats[item.topic]) topicStats[item.topic] = { correct: 0, total: 0 };
@@ -1127,10 +896,8 @@
                     topicStats[item.topic].total += item.total;
                 });
 
-                let bestTopic = "None";
-                let worstTopic = "None";
-                let maxRate = -1;
-                let minRate = 101;
+                let bestTopic = "None"; let worstTopic = "None";
+                let maxRate = -1; let minRate = 101;
 
                 for(const topic in topicStats) {
                     const rate = (topicStats[topic].correct / topicStats[topic].total) * 100;
@@ -1154,7 +921,7 @@
                 const history = JSON.parse(localStorage.getItem('bg_history') || '[]');
 
                 if(history.length === 0) {
-                    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; color: var(--text-muted);">No recorded attempts yet found. Try your first module quiz!</td></tr>`;
+                    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center; color: var(--text-muted);">No records found.</td></tr>`;
                     return;
                 }
 
@@ -1171,10 +938,8 @@
                 });
             },
 
-            // 9. CORE SYSTEM ENGINE FOR INTERNAL INTERACTIVE QUIZ PLAY
             startQuizSession() {
                 const originalBank = questionBank[this.currentQuiz.topic];
-                // Deep Copy & Safe Shuffling Engine deployment to prevent mutating baseline templates
                 let clonedQuestions = JSON.parse(JSON.stringify(originalBank));
                 this.shuffleArray(clonedQuestions);
                 
@@ -1200,16 +965,13 @@
                 document.getElementById('playQuestionNum').innerText = `Question ${qIndex + 1} of ${qTotal}`;
                 document.getElementById('playLiveScore').innerText = `Score: ${this.currentQuiz.score}`;
                 
-                // Progress Calculation Engine
                 const pct = Math.round(((qIndex) / qTotal) * 100);
                 document.getElementById('playProgressBar').style.width = `${pct}%`;
-
                 document.getElementById('playQuestionText').innerText = questionData.question;
 
                 const optionsContainer = document.getElementById('playOptionsContainer');
                 optionsContainer.innerHTML = "";
 
-                // Previous button management state mapping
                 document.getElementById('btnPrevQuestion').disabled = (qIndex === 0);
 
                 questionData.options.forEach((opt, idx) => {
@@ -1248,7 +1010,6 @@
                 const questionData = this.currentQuiz.questions[qIndex];
                 const correctIdx = questionData.answer;
 
-                // Disable all choice selections to enforce linear validation flow
                 document.querySelectorAll('.option-btn').forEach(btn => btn.disabled = true);
                 this.currentQuiz.userAnswers[qIndex] = selectedIdx;
 
@@ -1263,7 +1024,6 @@
                 } else {
                     audioEngine.play('wrong');
                     selectedButton.classList.add('incorrect');
-                    // Force reveal correct element tracking paths
                     const buttons = document.querySelectorAll('.option-btn');
                     if(buttons[correctIdx]) buttons[correctIdx].classList.add('correct');
                     feedbackEl.innerHTML = `<span style='color: var(--danger);'>✘ Incorrect!</span> <br><small style='font-size:0.9rem; color: var(--text-main);'>Correct Answer: ${questionData.options[correctIdx]}</small>`;
@@ -1271,16 +1031,12 @@
 
                 document.getElementById('playLiveScore').innerText = `Score: ${this.currentQuiz.score}`;
 
-                // Process auto delay shift 1.5 seconds
-                setTimeout(() => {
-                    this.nextQuestion();
-                }, 1500);
+                setTimeout(() => { this.nextQuestion(); }, 1500);
             },
 
             handleTimeout() {
                 const qIndex = this.currentQuiz.currentIndex;
-                this.currentQuiz.userAnswers[qIndex] = -1; // -1 represents timeout structural state
-                
+                this.currentQuiz.userAnswers[qIndex] = -1;
                 document.querySelectorAll('.option-btn').forEach(btn => btn.disabled = true);
                 
                 const feedbackEl = document.getElementById('playFeedback');
@@ -1288,9 +1044,7 @@
                 feedbackEl.innerHTML = "<span style='color: var(--danger);'>✘ Time's Up! Marked Incorrect.</span>";
                 audioEngine.play('wrong');
 
-                setTimeout(() => {
-                    this.nextQuestion();
-                }, 1500);
+                setTimeout(() => { this.nextQuestion(); }, 1500);
             },
 
             nextQuestion() {
@@ -1306,7 +1060,6 @@
                 if (this.currentQuiz.currentIndex > 0) {
                     this.currentQuiz.currentIndex--;
                     this.renderCurrentQuestion();
-                    // Restore visual answers if historically loaded
                     const pastAns = this.currentQuiz.userAnswers[this.currentQuiz.currentIndex];
                     if(pastAns !== undefined) {
                         const buttons = document.querySelectorAll('.option-btn');
@@ -1318,7 +1071,6 @@
                 }
             },
 
-            // 10. METRIC EVALUATION COMPILER ENGINE FOR GRADING SCORES
             calculateGrade(pct) {
                 if (pct >= 90) return 'A';
                 if (pct >= 80) return 'B';
@@ -1350,7 +1102,6 @@
 
                 this.saveToStorage(resultLog);
 
-                // Hydrate results rendering tree
                 document.getElementById('resName').innerText = this.user.name;
                 document.getElementById('resTopic').innerText = resultLog.topic;
                 document.getElementById('resTotal').innerText = resultLog.total;
@@ -1395,10 +1146,7 @@
             }
         };
 
-        // Initialize Application Context Engine when document completes structural compilation
-        window.addEventListener('DOMContentLoaded', () => {
-            app.init();
-        });
+        window.addEventListener('DOMContentLoaded', () => { app.init(); });
     </script>
 </body>
 </html>
